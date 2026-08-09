@@ -1,6 +1,6 @@
 {
 	"name": "@rickferrdevelop/env-doctor",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Flexible environment variable loader and parser for TypeScript and Bun",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.js",

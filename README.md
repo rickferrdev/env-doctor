@@ -17,16 +17,16 @@ A lightweight, flexible environment variable loader and parser for TypeScript, B
 
 ```bash
 # Using npm
-npm install env-doctor
+npm install @rickferrdevelop/env-doctor
 
 # Using bun
-bun add env-doctor
+bun add @rickferrdevelop/env-doctor
 
 # Using pnpm
-pnpm add env-doctor
+pnpm add @rickferrdevelop/env-doctor
 
 # Using yarn
-yarn add env-doctor
+yarn add @rickferrdevelop/env-doctor
 ```
 
 ---
@@ -44,7 +44,7 @@ export API_KEY=secret_key_123 # Inline comment
 Load it in your application:
 
 ```typescript
-import config from "env-doctor";
+import config from "@rickferrdevelop/env-doctor";
 
 async function main() {
   await config();
@@ -66,7 +66,7 @@ main();
 Asynchronously loads environment variables into `process.env`.
 
 ```typescript
-import config, { ConfigOptions } from "env-doctor";
+import config, { ConfigOptions } from "@rickferrdevelop/env-doctor";
 
 await config(options);
 ```
@@ -109,7 +109,7 @@ await config(options);
 Files are loaded in order. Subsequent files will overwrite existing `process.env` keys if duplicated.
 
 ```typescript
-import config from "env-doctor";
+import config from "@rickferrdevelop/env-doctor";
 
 await config({
   path: [".env", ".env.local"],
@@ -121,7 +121,7 @@ await config({
 Parsing files with custom formats (e.g., YAML-like syntax or custom comment indicators):
 
 ```typescript
-import config from "env-doctor";
+import config from "@rickferrdevelop/env-doctor";
 
 await config({
   customize: {
@@ -136,7 +136,7 @@ await config({
 Track or log environment loading progress:
 
 ```typescript
-import config from "env-doctor";
+import config from "@rickferrdevelop/env-doctor";
 
 await config({
   hooks: {
