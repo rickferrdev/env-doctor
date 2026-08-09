@@ -1,0 +1,55 @@
+{
+	"name": "@rickferrdevelop/env-doctor",
+	"version": "1.0.0",
+	"description": "Flexible environment variable loader and parser for TypeScript and Bun",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
+	"license": "MIT",
+	"author": {
+		"name": "Henrick Ferreira Saraiva",
+		"url": "https://github.com/rickferrdev"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rickferrdev/env-doctor.git"
+	},
+	"bugs": {
+		"url": "https://github.com/rickferrdev/env-doctor/issues"
+	},
+	"homepage": "https://github.com/rickferrdev/env-doctor#readme",
+	"keywords": [
+		"env",
+		"dotenv",
+		"environment",
+		"variables",
+		"loader",
+		"parser",
+		"bun",
+		"typescript"
+	],
+	"scripts": {
+		"build": "bun build index.ts --outdir ./dist --target node && bun build index.ts --outfile ./dist/index.cjs --target node --format cjs && tsc --declaration --emitDeclarationOnly --outDir dist --noEmit false",
+		"prepublishOnly": "bun run build",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
+}
